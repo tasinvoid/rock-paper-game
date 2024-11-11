@@ -1,4 +1,7 @@
 let humanScore =0,computerScore = 0;
+
+
+
 function getComputerChoice(){
     let randomNmber = Math.floor((Math.random()*3)+1)
     let computerChoice
@@ -13,13 +16,18 @@ function getComputerChoice(){
             computerChoice = "SCISSORS";
             break;
     }
-    return computerChoice
-    
+    return computerChoice   
 }
+
+
+
 function getHumanChoice(){
     let humanChoice = prompt("Choose rock or paper or scissors").toUpperCase();
     return humanChoice;
 }
+
+
+
 function playRound(humanChoice,computerChoice){
     if(humanChoice == computerChoice){
         console.log("it's a draw")
@@ -45,6 +53,19 @@ function playRound(humanChoice,computerChoice){
 
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
+
+function playGame(){
+    
+    for(let i = 0;i<=5;i++){
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+        console.log(humanScore)
+        console.log(computerScore)
+
+    }
+    console.log(`Your score is : ${humanScore}`)
+    console.log(`computer score is : ${computerScore}`)
+
+}
+playGame()
