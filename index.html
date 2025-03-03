@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPS</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- tailwind-cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- daisyui-cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-slate-500 min-h-screen text-white font-bold text-2xl flex items-center flex-col gap-8 justify-center"
+  >
+    <h1 class="py-5 text-white font-bold text-2xl text-center">
+      Rock Paper and Scissors
+    </h1>
+
+    <div
+      class="text-white border border-slate-800 flex flex-col items-center w-md p-20 rounded-xl"
+      id="score-board"
+    >
+      <p>Your Score: <span id="humanScoreDisplay">0</span></p>
+      <p>Computer Score: <span id="computerScoreDisplay">0</span></p>
+      <p>Round: <span id="roundDisplay">0</span></p>
+    </div>
+    <div id="buttons" class="flex items-center justify-center gap-10">
+      <button
+        id="rock-btn"
+        class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"
+      >
+        Rock
+      </button>
+      <button
+        id="paper-btn"
+        class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"
+      >
+        Paper
+      </button>
+      <button
+        id="scissors-btn"
+        class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"
+      >
+        Scissors
+      </button>
+    </div>
     <script src="js.js"></script>
-    
-</body>
+  </body>
 </html>
